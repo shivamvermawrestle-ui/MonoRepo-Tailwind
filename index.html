@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monorepo</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./src/input.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body class="relative bg-[#02080b] text-white">
+
+
+    <!-- BACKGROUND -->
+
+    <div class="fixed  inset-0 -z-0 pointer-events-none overflow-hidden">
+
+        <div class="absolute inset-0 overflow-hidden ">
+            <div class="moving-light"></div>
+        </div>
+        <div class="absolute inset-0 overflow-hidden ">
+            <div class="moving-light-down"></div>
+        </div>
+
+
+        <div class=" absolute inset-0 overflow-hidden ">
+
+            <div class="star star-1"></div>
+            <div class="star star-2"></div>
+            <div class="star star-3"></div>
+            <div class="star star-4"></div>
+
+        </div>
+
+        <!-- Gusty background -->
+        <div class=" absolute inset-0 overflow-hidden">
+
+            <div class="gust gust-1"></div>
+            <div class="gust gust-2"></div>
+            <div class="gust gust-3"></div>
+
+        </div>
+
+
+        <!-- Primary glow -->
+        <div id="primary-glow" class="absolute
+                -left-40 top-[25%]
+                h-[500px] w-[500px]
+                rounded-full
+                bg-primary
+                blur-[150px]"></div>
+
+
+        <!-- Purple glow -->
+        <div id="purple-glow" class="absolute
+                -right-40 top-[20%]
+                h-[500px] w-[500px]
+                rounded-full
+                bg-primary-2
+                blur-[150px]"></div>
+
+
+        <!-- Grid -->
+        <div id="hero-grid" class="absolute inset-[-50%]
+            bg-[linear-gradient(rgba(0,220,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,220,255,0.10)_1px,transparent_1px)]
+            bg-[size:60px_60px]"></div>
+
+        <!-- ISOMETRIC GRID -->
+
+
+    </div>
+
+    </div>
+
+
+    <nav
+        class="  py-4 px-6  sticky top-0  bg-dark flex   z-100 rounded-none items-center justify-between opacity-90 lg:w-[75%]  lg: mx-auto    lg:rounded-full lg:mt-8 lg:top-8">
+
+        <div class="flex items-center gap-1">
+            <span class="logo size-8 inline-flex items-center justify-center text-sm  text-white "><strong
+                    class="font-bold">N</strong></span>
+            <strong class="text-primary text-lg font-bold">Mono</strong>
+        </div>
+
+        <div class="menu hidden   items-center gap-8 text-secondary-text  lg:flex">
+            <a href="#section2">Start</a>
+            <a href="#section3">Structure</a>
+            <a href="#section5">Packages</a>
+            <a href="#section7">Versions</a>
+            <a href="#section9">FAQ</a>
+
+        </div>
+        <button id="menubtn" class="py-1 px-1 flex items-center justify-center lg:hidden"><i id="menuicon"
+                class="fa-solid fa-bars text-primary text-lg "></i></button>
+
+    </nav>
+
+    <div id="mobilemenu" class="fixed left-0 top-14 z-[90] w-full 
+           bg-dark
+          flex flex-col gap-4 text-secondary-text text-2xl
+           py-14 px-8
+           opacity-0 invisible
+           -translate-y-5
+           transition-all duration-300
+           lg:hidden">
+
+
+        <div class="flex px-6 py-6 bg-cardbg rounded-2xl items-start">
+            <a href="#section2">Start</a>
+        </div>
+        <div class="flex px-6 py-6 bg-cardbg rounded-2xl items-start">
+
+            <a href="#section3">Structure</a>
+        </div>
+        <div class="flex px-6 py-6 bg-cardbg rounded-2xl items-start">
+            <a href="#section5">Packages</a>
+        </div>
+        <div class="flex px-6 py-6 bg-cardbg rounded-2xl items-start">
+            <a href="#section7">Versions</a>
+        </div>
+        <div class="flex px-6 py-6 bg-cardbg rounded-2xl items-start">
+            <a href="#section9">FAQ</a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <section id="section1" class="sectionspace relative z-10  overflow-hidden">
+
+
+
+
+        <div class="container relative z-10  " data-aos="fade-up">
+            <div id="p-1"
+                class="flex py-1 px-4 rounded-4xl  items-center justify-center gap-1 border border-primary bg-white/5 backdrop-blur-md backdrop-saturate-150">
+                <span class=" text-primary text-xs font-semibold">TURBOREPO </span>
+                <i class="fa-solid fa-circle text-[4px] text-primary"></i>
+                <span class=" text-primary text-xs font-semibold">NEXT.JS </span>
+                <i class="fa-solid fa-circle text-[4px] text-primary"></i>
+                <span class=" text-primary text-xs font-semibold">EXPO </span>
+                <i class="fa-solid fa-circle text-[4px] text-primary"></i>
+            </div>
+
+            <div id="hero-title" class="flex flex-col items-center justify-center gap-4">
+
+
+                <h1 class="text-center text-[56px] leading-14 font-bold text-white">One repo. <br>
+                    <span class="text-primary-2">Web and mobile.</span>
+                </h1>
+                <p class="text-secondary-text3 text-center ">A production-ready monorepo layout — shared packages,
+                    two app
+                    <br> targets, and Turborepo scripts from the root.
+                </p>
+
+            </div>
+
+
+            <div id="hero-search"
+                class=" w-3/5  py-6 px-4 bg-dark rounded-2xl  flex items-center gap-2 shadow-lg shadow-primary ">
+                <i class="fa-solid fa-wand-sparkles text-primary"></i> <input
+                    class="text-white w-full  border-none outline-none focus:outline-none focus:ring-0" type="text"
+                    name="" placeholder="Explore the workspace layout">
+            </div>
+            <div id="p-2" class="  flex flex-col justify-center items-center  gap-4  
+">
+                <div class=" flex items-center justify-center gap-2 flex-wrap">
+                    <span class=" span text-primary ">Free on ThemeWagon</span>
+                    <span class="span text-primary-2 ">Full source code</span>
+                    <span class="span text-primary-3 ">
+                        Android APK</span>
+                    <span class="span  text-primary ">Premium upgrade</span>
+                </div>
+            </div>
+
+
+
+            <div id="p-3" class="flex flex-col items-center gap-2">
+                <h6 class="text-[10px] font-semibold text-secondary-text2">Built with</h6>
+
+                <div class="flex items-center gap-4 flex-wrap justify-center">
+                    <span class="span2 ">Turborepo</span>
+                    <span class="span2 ">Next.js 15</span>
+                    <span class="span2 ">Expo 54</span>
+                    <span class="span2 ">TypeScript</span>
+                    <span class="span2 ">Yarn workspaces</span>
+                    <span class="span2 ">Shared UI</span>
+                </div>
+            </div>
+
+            <div id="hero-cards" class="grid grid-cols-2 gap-5    md:grid-cols-2 lg:grid-cols-4">
+
+                <div class=" card flex flex-col items-center gap-2.5    
+  hover:border border-primary
+                 
+                    ">
+                    <i class="fa-solid fa-mobile-screen text-primary "></i>
+                    <span class="text-2xl font-bold ">2+</span>
+                    <div class="flex flex-col">
+                        <span class="text-xs font-semibold  text-center"">App targets</span>
+                <small class=" text-[10px] text-secondary-text2 text-center">Web+Mobile</small>
+                    </div>
+                </div>
+
+                <div class=" card flex flex-col items-center gap-2.5  
+  hover:border border-primary-2">
+                    <i < class="fa-solid fa-cube text-primary-2 "></i>
+                    <span class="text-2xl font-bold ">5+</span>
+                    <div class="flex flex-col">
+                        <span class="text-xs font-semibold ">Shared packages</span>
+                        <small class="text-[10px] text-secondary-text2 text-center">ui · state · api</small>
+                    </div>
+                </div>
+
+                <div class=" card flex flex-col items-center gap-2.5  
+  hover:border border-primary-3">
+                    <i class="fa-solid fa-chart-bar text-primary-3"></i>
+                    <span class="text-2xl font-bold ">1+</span>
+                    <div class="flex flex-col">
+                        <span class="text-xs font-semibold text-center"">Root install </span>
+                <small class=" text-[10px] text-secondary-text2 text-center">Yarn workspaces</small>
+                    </div>
+                </div>
+
+                <div class=" card flex flex-col items-center gap-2.5  
+  hover:border border-primary">
+                    <i class="fa-solid fa-bolt text-primary "></i>
+                    <span class="text-2xl font-bold  text-center">3 min</span>
+                    <div class="flex flex-col">
+                        <span class="text-xs font-semibold text-center" ">
+Min to run
+</span>
+                <small class=" text-[10px] text-secondary-text2 text-center">Clone to localhost</small>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div id="p-4" class="flex flex-col items-center justify-center gap-5  relative z-10">
+            <span class="text-sm text-secondary-text2">Monorepo stack</span>
+            <div class="flex items-center justify-center flex-wrap gap-4 ">
+                <span class="span3">Turborepo</span>
+                <span class="span3">Yarn</span>
+                <span class="span3">Next.js</span>
+                <span class="span3">Expo</span>
+                <span class="span3">TypeScript</span>
+                <span class="span3">Workspaces</span>
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+    <section id="section2" class=" z-10 sectionspace relative  lg:py-20 px-20 ">
+
+        <div class=" container  " data-aos="fade-up">
+            <span class="button  bg-white/5 backdrop-blur-md backdrop-saturate-150 text-primary">Get
+                Started</span>
+
+            <h1 class="text-center text-[36px] leading-14 font-bold text-white">How to run web and mobile</h1>
+            <p class="text-secondary-text text-center text-lg ">One install. Then start the website, the phone app, or
+                both — from the same repository.</p>
+        </div>
+
+
+        <div class=" w-full flex  items-center justify-center flex-wrap gap-6 " data-aos="fade-up">
+
+            <div class="card-1 w-[400px]  hover:border border-primary">
+
+                <div class="flex w-full  items-center justify-between gap-10">
+                    <i class="fa-regular fa-clone text-primary"></i>
+                    <span class="text-[30px] font-bold">01</span>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-lg font-bold text-white">Clone & install</h3>
+                    <p class="text-sm text-secondary-text">One `yarn install` at the repo root installs every app and
+                        package in the workspace.</p>
+                </div>
+
+                <div class="w-full flex items-start bg-[#08090d] py-2 px-4 rounded-[8px]"><span>yarn install</span>
+                </div>
+            </div>
+            <div class="card-1  w-[400px] hover:border border-primary-2">
+
+                <div class="flex w-full  items-center justify-between gap-10">
+                    <i class="fa-solid fa-terminal text-primary-2"></i>
+                    <span class="text-[30px] font-bold  text-primary-2">02</span>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-lg font-bold text-white">Run web and mobile</h3>
+                    <p class="text-sm text-secondary-text">Stay in the same folder. yarn web starts Next.js at
+                        localhost:3000. yarn android or yarn ios starts Expo. Same shared code — pick the platform you
+                        want to preview.</p>
+                </div>
+
+                <div class="w-full flex items-start bg-[#08090d] py-2 px-4 rounded-[8px]"><span>yarn web</span> </div>
+            </div>
+            <div class="card-1  w-[400px] hover:border border-primary-3">
+
+                <div class="flex w-full  items-center justify-between gap-10">
+                    <i class="fa-solid fa-rocket text-primary-3"></i>
+                    <span class="text-[30px] font-bold  text-primary-3">03</span>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-lg font-bold text-white">Extend packages</h3>
+                    <p class="text-sm text-secondary-text">Add features under packages/shared_mono_app and import them
+                        from both apps — no second repo.</p>
+                </div>
+
+                <div class="w-full flex items-start bg-[#08090d] py-2 px-4 rounded-[8px]"><span>yarn api
+                        myFeature</span> </div>
+            </div>
+
+        </div>
+
+
+        <div class="py-8 px-8 rounded-4xl bg-transparent border border-primary-3 flex items-center justify-between gap-1  flex-wrap lg:flex-nowrap gap-8 shadow-md shadow-primary hover:border-primary-2"
+            data-aos="fade-up">
+
+            <div class="left-container flex flex-col gap-4 ">
+
+                <div
+                    class="flex items-center justify-center  w-[200px] gap-2 border  border-black py-1 px-2 rounded-4xl">
+                    <i class="fa-solid fa-wand-sparkles text-primary-2"></i>
+                    <span class="text-primary-2 text-sm font-semibold">Full product available</span>
+                </div>
+
+                <h1 class="text-[30px] font-bold text-white">Need dashboards, auth, and the complete UI kit?</h1>
+                <p class="text-sm text-secondary-text">This free build shows the monorepo architecture. The premium
+                    version adds <br> production screens, OTP login, dark/light mode, and the full cross-platform <br>
+                    component library.</p>
+
+                <div class="flex items-start flex-wrap gap-4">
+                    <span
+                        class="py-[2px] px-2 rounded-4xl bg-[#151821] text-primary text-center text-[11px] font-semibold flex shrink-0 border border-primary">Full
+                        dashboard</span>
+                    <span
+                        class="py-[2px] px-2 rounded-4xl bg-[#151821] text-primary text-center text-[11px] font-semibold flex shrink-0 border border-primary">Auth
+                        flows</span>
+                    <span
+                        class="py-[2px] px-2  rounded-4xl bg-[#151821] text-primary text-center text-[11px] font-semibold flex shrink-0 border border-primary">Multi-language</span>
+                </div>
+            </div>
+
+            <div class="right-container">
+                <button class="button bg-primary text-white shadow-lg shadow-[#1c2569]">Compare free vs Premium</button>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <section id="section3" class="sectionspace z-10 relative  lg:py-20 px-20">
+
+        <div class=" container " data-aos="fade-up">
+            <span class="button  bg-white/5 backdrop-blur-md backdrop-saturate-150 text-primary">Structure </span>
+
+            <h1 class="text-center text-[36px] leading-14 font-bold text-white">Three folders to understand</h1>
+            <p class="text-secondary-text text-center text-lg ">If you know where code belongs, the rest of the repo
+                stays maintainable.</p>
+        </div>
+
+        <div class="flex flex-col justify-center gap-4">
+            <div class="py-6 px-6 bg-cardbg rounded-4xl flex items-center justify-between flex-wrap hover:border border-primary
+ gap-4 lg:gap-24 " data-aos="fade-right">
+
+                <div class="flex items-center  gap-4">
+                    <i class="fa-solid fa-folder-tree text-primary"></i>
+                    <div class="flex flex-col gap-4">
+                        <small class="text-[10px] font-semibold text-primary">Apps/</small>
+                        <h3 class="text-2xl text-white font-bold">Thin application shells</h3>
+                        <p class="text-sm text-secondary-text">Routing, providers, and platform entry points only.
+                            Business logic imports from `packages/`.</p>
+                    </div>
+                </div>
+                <span
+                    class="button flex items-center gap-2 bg-white/5 backdrop-blur-md backdrop-saturate-150 text-primary">Structure
+                    <i class="fa-solid fa-arrow-right-long"></i> </span>
+            </div>
+            <div class="py-6 px-6 bg-cardbg rounded-4xl flex items-center justify-between flex-wrap hover:border border-primary-2
+ gap-4 lg:gap-24 " data-aos="fade-left">
+
+                <div class="flex items-center  gap-4">
+                    <i class="fa-solid fa-cube text-primary-2"></i>
+                    <div class="flex flex-col gap-4">
+                        <small class="text-[10px] font-semibold text-primary-2">packages/</small>
+                        <h3 class="text-2xl text-white font-bold">Shared implementation</h3>
+                        <p class="text-sm text-secondary-text">UI, state, API clients, and features are versioned
+                            together and imported by every app.</p>
+                    </div>
+                </div>
+                <span
+                    class="button flex items-center gap-2 bg-white/5 backdrop-blur-md backdrop-saturate-150 text-primary">See
+                    workflow <i class="fa-solid fa-arrow-right-long"></i> </span>
+            </div>
+            <div class="py-6 px-6 bg-cardbg rounded-4xl flex items-center justify-between flex-wrap hover:border border-primary-3
+ gap-4 lg:gap-24" data-aos="fade-right">
+
+                <div class="flex items-center  gap-4">
+                    <i class="fa-solid fa-chart-bar text-primary-3"></i>
+                    <div class="flex flex-col gap-4">
+                        <small class="text-[10px] font-semibold text-primary-3">root</small>
+                        <h3 class="text-2xl text-white font-bold">Turborepo orchestration</h3>
+                        <p class="text-sm text-secondary-text">One `package.json` at the root runs dev, build, and lint
+                            for the whole workspace.</p>
+                    </div>
+                </div>
+                <span
+                    class="button flex items-center gap-2 bg-white/5 backdrop-blur-md backdrop-saturate-150 text-primary">Read
+                    FAQ <i class="fa-solid fa-arrow-right-long"></i> </span>
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <section id="section4" class="sectionspace relative z-10  overflow-hidden lg:py-20 px-20">
+
+        <div class=" container " data-aos="fade-up">
+            <span class="button  bg-white/5 backdrop-blur-md backdrop-saturate-150 text-primary">Why monorepo</span>
+
+            <h1 class="text-center text-[36px] leading-14 font-bold text-white">Built for teams who ship web and mobile
+                together</h1>
+            <p class="text-secondary-text text-center text-lg ">Ship web and mobile from one workspace — without
+                duplicating components, configs, or installs..</p>
+        </div>
+
+        <div class=" w-full flex items-center justify-center flex-wrap gap-6" data-aos="fade-up">
+
+            <div class="card-1 flex flex-col justify-center w-[400px] h-[250px] hover:border border-primary">
+
+                <div class="flex w-full  items-center justify-between gap-10">
+                    <i class="fa-solid fa-retweet text-primary"></i>
+
+
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-lg font-bold text-white">Write once, ship twice</h3>
+                    <p class="text-sm text-secondary-text">Shared UI, state, and API clients import into Next.js and
+                        Expo. Fix a bug once — both platforms get the update.</p>
+                </div>
+
+
+            </div>
+            <div class="card-1 flex flex-col justify-center w-[400px] h-[250px] hover:border border-primary-2">
+
+                <div class="flex w-full  items-center justify-between gap-10">
+                    <i class="fa-solid fa-code text-primary-2"></i>
+
+
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-lg font-bold text-white">Type-safe across packages</h3>
+                    <p class="text-sm text-secondary-text">TypeScript path aliases connect every package. Refactors stay
+                        consistent from `packages/ui` to `apps/mobile`.</p>
+                </div>
+
+
+            </div>
+            <div class="card-1 flex flex-col justify-center w-[400px] h-[250px] hover:border border-primary-3">
+
+                <div class="flex w-full  items-center justify-between gap-10">
+                    <i class="fa-solid fa-stopwatch text-primary-3"></i>
+
+
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <h3 class="text-lg font-bold text-white">Faster CI & local builds</h3>
+                    <p class="text-sm text-secondary-text">Turborepo caches task outputs. Re-run `turbo build` or `turbo
+                        lint` and only changed packages rebuild.</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="section5" class="sectionspace relative z-10  overflow-hidden lg:py-20 px-20">
+
+        <div class=" container " data-aos="fade-up">
+            <span class="button  bg-white/5 backdrop-blur-md backdrop-saturate-150 text-primary">Workspace</span>
+
+            <h1 class="text-center text-[36px] leading-14 font-bold text-white">Folder layout at a glance</h1>
+            <p class="text-secondary-text text-center text-lg ">Applications stay in `apps/`. Reusable code lives in
+                `packages/`. Turborepo connects builds and dev scripts across both.</p>
+        </div>
+
+        <div class="flex justify-between gap-10 flex-col lg:flex-row ">
+
+            <div class="left flex  flex-col items-center gap-6 w-full" data-aos="fade-right">
+
+                <div class="part-1 flex flex-col items-start gap-4 w-full ">
+                    <h3 class="text-sm font-bold text-primary">RUN WHAT YOU NEED</h3>
+
+                    <div class="flex items-center flex-col w-full gap-4 sm:flex-row">
+
+                        <div
+                            class="py-4 px-4 w-full bg-cardbg flex items-center gap-2 rounded-2xl hover:border border-primary">
+
+                            <span
+                                class="logo  bg-white/5 backdrop-blur-md backdrop-saturate-150  size-10 inline-flex items-center justify-center text-sm shrink-0   "><i
+                                    class="ri-global-line text-primary text-xl"></i></span>
+                            <small class="text-sm text-secondary-text3"> `yarn web` — Next.js app</small>
+
+                        </div>
+                        <div
+                            class="py-4 px-4 w-full bg-cardbg flex items-center gap-2 rounded-2xl hover:border border-primary-2">
+
+                            <span
+                                class="logo  bg-white/5 backdrop-blur-md backdrop-saturate-150  size-10 inline-flex items-center justify-center text-sm   shrink-0 "><i
+                                    class="ri-global-line text-primary text-xl"></i></span>
+                            <small class="text-sm text-secondary-text3"> `yarn web` — Next.js app</small>
+
+                        </div>
+                        <div
+                            class="py-4 px-4 w-full bg-cardbg flex items-center gap-2 rounded-2xl hover:border border-primary-3">
+
+                            <span
+                                class="logo  bg-white/5 backdrop-blur-md backdrop-saturate-150  size-10 inline-flex items-center justify-center text-sm  shrink-0  "><i
+                                    class="ri-global-line text-primary text-xl"></i></span>
+                            <small class="text-sm text-secondary-text3"> `yarn web` — Next.js app</small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="py-4 px-4  bg-cardbg flex items-center gap-2 rounded-2xl w-full hover:border border-primary-2">
+
+                        <span
+                            class="logo  bg-white/5 backdrop-blur-md backdrop-saturate-150  size-10 inline-flex items-center justify-center text-sm   "><i
+                                class="ri-global-line text-primary text-xl"></i></span>
+                        <small class="text-sm text-secondary-text3"> Add apps or packages anytime</small>
+
+                    </div>
+                </div>
+
+                <div class="flex items-start flex-col gap-5
+bg-cardbg py-6 px-6 rounded-4xl  w-full hover:border border-primary">
+                    <h3 class="text-sm font-bold text-primary-2">SHARED PACKAGES</h3>
+
+                    <div class="flex flex-col gap-4 items-start">
+
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="logo  bg-white/5 backdrop-blur-md backdrop-saturate-150  size-7 inline-flex items-center justify-center text-sm   rounded-full"><i
+                                    class="fa-solid fa-check text-xs text-primary"></i></span>
+                            <p class="text-sm text-secondary-text font-normal">`ui` — components and theme tokens</p>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="logo  bg-white/5 backdrop-blur-md backdrop-saturate-150  size-7 inline-flex items-center justify-center text-sm   rounded-full"><i
+                                    class="fa-solid fa-check text-xs text-primary"></i></span>
+                            <p class="text-sm text-secondary-text font-normal">`state` — sidebar and toast UI state</p>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="logo  bg-white/5 backdrop-blur-md backdrop-saturate-150  size-7 inline-flex items-center justify-center text-sm   rounded-full"><i
+                                    class="fa-solid fa-check text-xs text-primary"></i></span>
+                            <p class="text-sm text-secondary-text font-normal">`api` — fetch helpers and React Query
+                                setup</p>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <span
+                                class="logo  bg-white/5 backdrop-blur-md backdrop-saturate-150  size-7 inline-flex items-center justify-center text-sm   rounded-full"><i
+                                    class="fa-solid fa-check text-xs text-primary"></i></span>
+                            <p class="text-sm text-secondary-text font-normal">`shared_mono_app` — feature modules used
+                                by apps</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="flex items-start flex-col w-full gap-2">
+                    <button
+                        class="button bg-primary w-full flex items-center justify-center gap-2 shadow-md shadow-[#1c2569]">Download
+                        Android APK<i class="fa-solid fa-download "></i></button>
+                    <p class="text-sm text-secondary-text2">Install the free monorepo starter demo on your Android
+                        device.</p>
+                </div>
+
+            </div>
+
+            <div class="right w-full h-full flex items-baseline" data-aos="fade-left">
+
+                <div class="flex flex-col gap-2 items-center  py-5 px-4 rounded-4xl bg-cardbg w-full  ">
+
+
+                    <img class="w-full  object-cover "
+                        src="./assets/icons/DemoImg/Screenshot 2026-05-29 at 1.13.32 PM.png" alt="">
+                    <p class="text-xs text-secondary-text2 font-normal ">Both apps consume the same shared packages from
+                        one
+                        repository.</p>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+
+    <section id="section6" class="sectionspace relative z-10  overflow-hidden lg:py-20 px-20">
+
+        <div class=" container " data-aos="fade-up">
+            <span class="button  bg-white/5 backdrop-blur-md backdrop-saturate-150 text-primary">Why monorepo</span>
+
+            <h1 class="text-center text-[36px] leading-14 font-bold text-white">Less duplication. Clear ownership.</h1>
+            <p class="text-secondary-text text-center text-lg ">Shared UI, state, and API code ship once and import
+                everywhere — the main reason this template exists.</p>
+        </div>
+
+        <div class="w-full grid grid-cols-1   gap-5  md:grid-cols-2 lg:grid-cols-3" data-aos="fade-up">
+
+            <div
+                class="card-1 items-start gap-4 transition-all delay-75 duration-300 ease-in hover:scale-[1.1] hover:border border-cyan-800 ">
+                <span
+                    class="logo  bg-white/5 backdrop-blur-md backdrop-saturate-150  size-12 inline-flex items-center justify-center text-sm shrink-0   "><i
+                        class="fa-solid fa-code-merge text-primary"></i></span>
+
+                <p class="text-base  font-bold text-secondary-text3">Turborepo task pipeline and build cache</p>
+            </div>
+            <div
+                class="card-1 items-start gap-4 transition-all delay-75 duration-300 ease-in hover:scale-[1.1] hover:border border-cyan-800 ">
+                <span
+                    class="logo  bg-white/5 backdrop-blur-md backdrop-saturate-150  size-12 inline-flex items-center justify-center text-sm shrink-0   "><i
+                        class="fa-solid fa-code-branch text-primary"></i></span>
+
+                <p class="text-base  font-bold text-secondary-text3">Yarn workspaces dependency graph</p>
+            </div>
+            <div
+                class="card-1 items-start gap-4 transition-all delay-75 duration-300 ease-in hover:scale-[1.1] hover:border border-cyan-800 ">
+                <span
+                    class="logo  bg-white/5 backdrop-blur-md backdrop-saturate-150  size-12 inline-flex items-center justify-center text-sm shrink-0   "><i
+                        class="fa-solid fa-cube text-primary text-lg"></i></span>
+
+                <p class="text-base  font-bold text-secondary-text3">TypeScript path aliases across packages</p>
+            </div>
+            <div
+                class="card-1 items-start gap-4  transition-all delay-75 duration-300 ease-in hover:scale-[1.1] hover:border border-cyan-800">
+                <span
+                    class="logo  bg-white/5 backdrop-blur-md backdrop-saturate-150  size-12 inline-flex items-center justify-center text-sm shrink-0   "><i
+                        class="fa-solid fa-chart-bar text-primary"></i></span>
+
+                <p class="text-base  font-bold text-secondary-text3">`apps/web` + `apps/mobile` in one clone</p>
+            </div>
+            <div
+                class="card-1 items-start gap-4 transition-all delay-75 duration-300 ease-in hover:scale-[1.1] hover:border border-cyan-800">
+                <span
+                    class="logo  bg-white/5 backdrop-blur-md backdrop-saturate-150  size-12 inline-flex items-center justify-center text-sm shrink-0   ">
+                    <i class="fa-solid fa-terminal text-primary"></i></span>
+
+                <p class="text-base  font-bold text-secondary-text3">Root scripts: `turbo dev`, `turbo build`, `turbo
+                    lint`</p>
+            </div>
+            <div
+                class="card-1 items-start gap-4  transition-all delay-75 duration-300 ease-in hover:scale-[1.1] hover:border border-cyan-800">
+                <span
+                    class="logo  bg-white/5 backdrop-blur-md backdrop-saturate-150  size-12 inline-flex items-center justify-center text-sm shrink-0   ">
+                    <i class="fa-solid fa-folder-tree text-primary"></i></span>
+
+                <p class="text-base  font-bold text-secondary-text3">Package boundaries that scale with your product</p>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="section7" class="sectionspace relative z-10  overflow-hidden lg:py-20 px-20">
+
+        <div class=" container " data-aos="fade-up">
+            <span class="button  bg-white/5 backdrop-blur-md backdrop-saturate-150 text-primary">Free vs Premium</span>
+
+            <h1 class="text-center text-[36px] leading-14 font-bold text-white">This ThemeWagon build vs the full
+                product</h1>
+            <p class="text-secondary-text text-center text-lg ">You are viewing the free monorepo starter. The premium
+                version adds the complete dashboard, auth flows, and extended UI kit.
+            </p>
+        </div>
+
+
+        <div class="flex flex-col items-baseline justify-between gap-4 lg:flex-row " >
+
+            <div class="card-1 items-start gap-2  border border-gray-600 hover:border-primary"  
+            
+            data-aos="fade-right">
+                <small class="text-xs font-semibold text-primary">INCLUDED HERE</small>
+                <span class="text-xl font-bold">Themewagon Free</span>
+                <span class="text-2xl font-bold text-primary "> Free</span>
+
+                <p class=" text-base font-normal text-secondary-text">Monorepo architecture shell published for
+                    ThemeWagon — landing page and shared packages only.</p>
+
+                <div class="flex flex-col gap-4 items-start pt-4 ">
+
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-xs text-primary"></i>
+                        <p class="font-normal text-sm text-secondary-text">Turborepo monorepo (Next.js web + Expo
+                            mobile)</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-xs text-primary"></i>
+                        <p class="font-normal text-sm text-secondary-text">Landing page focused on monorepo structure
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-xs text-primary"></i>
+                        <p class="font-normal text-sm text-secondary-text">Shared packages: `ui`, `state`, `api`,
+                            `shared_mono_app`
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-xs text-primary"></i>
+                        <p class="font-normal text-sm text-secondary-text">Neural dark theme (fixed)</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-xs text-primary"></i>
+                        <p class="font-normal text-sm text-secondary-text">English-only UI copy</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-xs text-primary"></i>
+                        <p class="font-normal text-sm text-secondary-text">Full source code — no login or dashboard
+                            screens</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card-1 items-start gap-2  border border-primary-3 hover:border-primary-2"  data-aos="fade-left">
+                <small class="text-xs font-semibold text-primary-2">FULL PRODUCT</small>
+                <span class="text-xl font-bold">Neural Workspace Premium</span>
+
+
+                <p class=" text-base font-normal text-secondary-text">Complete admin dashboard template with
+                    authentication, workspace screens, and the full cross-platform UI library.</p>
+
+                <div class="flex flex-col gap-4 items-start pt-4">
+
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-xs text-primary-2"></i>
+                        <p class="font-normal text-sm text-secondary-text">Everything in the free monorepo starter</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-xs text-primary-2"></i>
+                        <p class="font-normal text-sm text-secondary-text">Full web dashboard and mobile app screens</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-xs text-primary-2"></i>
+                        <p class="font-normal text-sm text-secondary-text">OTP, PIN, and biometric authentication</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-xs text-primary-2"></i>
+                        <p class="font-normal text-sm text-secondary-text">Dark / light mode toggle</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-xs text-primary-2"></i>
+                        <p class="font-normal text-sm text-secondary-text">Multi-language support (EN / AR / FR)</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-xs text-primary-2"></i>
+                        <p class="font-normal text-sm text-secondary-text">Complete reusable UI components and form
+                            builder</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-xs text-primary-2"></i>
+                        <p class="font-normal text-sm text-secondary-text">AI Studio, workspace modules, and
+                            documentation</p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-check text-xs text-primary-2"></i>
+                        <p class="font-normal text-sm text-secondary-text">Live demo, pricing, and checkout on the
+                            product page</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="flex  w-full items-start flex-col gap-2 " data-aos="fade-up">
+            <button class="button w-full bg-primary flex items-center justify-center gap-2 shadow-md  shadow-[#1c2569]  transition-all delay-150 duration-300 ease-in hover:scale-[1.1] hover:bg-cyan-200
+                        lg:w-md">Get the Full Version<i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+            <p class="text-xs font-normal text-secondary-text2">Opens the official premium product page with live demo,
+                pricing, and purchase options.</p>
+        </div>
+
+    </section>
+
+
+    <section id="section8" class="sectionspace relative z-10  overflow-hidden lg:py-20 px-20">
+
+        <div class=" container " data-aos="fade-up">
+            <span class="button  bg-white/5 backdrop-blur-md backdrop-saturate-150 text-primary">Developer
+                feedback</span>
+
+            <h1 class="text-center text-[36px] leading-14 font-bold text-white">What builders say about monorepos done
+                right</h1>
+            <p class="text-secondary-text text-center text-lg ">Real workflow wins — the kind of social proof that helps
+                ThemeWagon visitors understand the value fast.</p>
+        </div>
+
+        <div class=" flex items-center justify-center flex-wrap gap-6 lg:flex-nowrap ">
+
+            <div class="card-1 items-start gap-6 hover:border border-primary">
+                <i class="fa-solid fa-quote-right text-primary text-2xl"></i>
+
+                <p class="text-sm  font-normal text-secondary-text">"I stopped maintaining two repos for the same UI.
+                    Shared components between Next.js and Expo actually work here."</p>
+
+                <div class="flex w-full flex-col gap-1 items-start pt-6 border-t border-gray-600">
+                    <span class="text-sm font-bold">Maya</span>
+                    <span class="text-xs text-secondary-text2 font-normal">Full-stack developer</span>
+                </div>
+
+            </div>
+            <div class="card-1 items-start gap-6 hover:border border-primary-2">
+                <i class="fa-solid fa-quote-right text-primary text-2xl"></i>
+
+                <p class="text-sm  font-normal text-secondary-text">"The package boundaries are obvious from day one.
+                    New engineers know exactly where web routing ends and shared logic begins."</p>
+
+                <div class="flex w-full flex-col gap-1 items-start pt-6 border-t border-gray-600">
+                    <span class="text-sm font-bold">James Okoro</span>
+                    <span class="text-xs text-secondary-text2 font-normal">Engineering lead</span>
+                </div>
+
+            </div>
+            <div class="card-1 items-start gap-6 hover:border border-primary-3 ">
+                <i class="fa-solid fa-quote-right text-primary text-2xl"></i>
+
+                <p class="text-sm  font-normal text-secondary-text">"Turborepo caching alone saved our team hours every
+                    week. Build only what changed — that's the selling point for me."</p>
+
+                <div class="flex w-full flex-col gap-1 items-start pt-6 border-t border-gray-600">
+                    <span class="text-sm font-bold">Sofia Martinez</span>
+                    <span class="text-xs text-secondary-text2 font-normal">Startup founder</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="section9" class="sectionspace relative z-10  overflow-hidden lg:py-20 px-20">
+
+        <div class=" container " data-aos="fade-up">
+            <span class="button  bg-white/5 backdrop-blur-md backdrop-saturate-150 text-primary">FAQ</span>
+
+            <h1 class="text-center text-[36px] leading-14 font-bold text-white">Monorepo questions</h1>
+            <p class="text-secondary-text text-center text-lg ">Short answers about this workspace template.</p>
+        </div>
+
+        <div class=" flex flex-col  w-full items-center justify-center gap-4 *:">
+
+            <div
+                class="faq-card cursor-pointer flex flex-col w-full gap-2 items-start py-6 px-6 bg-cardbg rounded-2xl border border-gray-600 hover:border-primary">
+
+                <div class="faq-header  w-full flex items-center  justify-between">
+                    <span class="text-secondary-text3">What ships in this template?</span>
+                    <i class="fa-solid fa-angle-down text-base text-primary"></i>
+                </div>
+
+
+                <div class="faq-collapse grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+                    <div class="overflow-hidden">
+                        <div class=" text-gray-400">
+                            <p>A Turborepo monorepo with apps/web, apps/mobile, shared packages, and a landing page.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div
+                class="faq-card cursor-pointer flex flex-col w-full gap-2 items-start py-6 px-6 bg-cardbg rounded-2xl border border-gray-600 hover:border-primary">
+
+                <div class="faq-header  w-full flex items-center  justify-between">
+                    <span class="text-secondary-text3">How do I add a new package?</span>
+                    <i class="fa-solid fa-angle-down text-base text-primary"></i>
+                </div>
+
+
+                <div class="faq-collapse grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+                    <div class="overflow-hidden">
+                        <div class=" text-gray-400">
+                            <p>Create a folder under `packages/`, register it in the root workspace config, then import
+                                it from your apps.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div
+                class="faq-card cursor-pointer flex flex-col w-full gap-2 items-start py-6 px-6 bg-cardbg rounded-2xl border border-gray-600 hover:border-primary">
+
+                <div class="faq-header  w-full flex items-center  justify-between">
+                    <span class="text-secondary-text3">Can I use only web or only mobile?</span>
+                    <i class="fa-solid fa-angle-down text-base text-primary"></i>
+                </div>
+
+
+                <div class="faq-collapse grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+                    <div class="overflow-hidden">
+                        <div class=" text-gray-400">
+                            <p>Yes. Run the web app alone, the mobile app alone, or both — shared packages work with
+                                either target.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div
+                class="faq-card cursor-pointer flex flex-col w-full gap-2 items-start py-6 px-6 bg-cardbg rounded-2xl border border-gray-600 hover:border-primary">
+
+                <div class="faq-header  w-full flex items-center  justify-between">
+                    <span class="text-secondary-text3">Where should new features go?</span>
+                    <i class="fa-solid fa-angle-down text-base text-primary"></i>
+                </div>
+
+
+                <div class="faq-collapse grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+                    <div class="overflow-hidden">
+                        <div class=" text-gray-400">
+                            <p>Put reusable logic in `packages/shared_mono_app` or a new package. Keep `apps/*` focused
+                                on routing and app wiring.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div
+                class="faq-card cursor-pointer flex flex-col w-full gap-2 items-start py-6 px-6 bg-cardbg rounded-2xl border border-gray-600 hover:border-primary">
+
+                <div class="faq-header  w-full flex items-center  justify-between">
+                    <span class="text-secondary-text3">How do I get the premium version?</span>
+                    <i class="fa-solid fa-angle-down text-base text-primary"></i>
+                </div>
+
+
+                <div class="faq-collapse grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out">
+                    <div class="overflow-hidden">
+                        <div class=" text-gray-400">
+                            <p>Use the Get the Full Version button in the Free vs Premium section to open the official
+                                product page with live demo, pricing, and purchase options.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+    </section>
+
+
+
+    <footer id="section10" class="sectionspace relative  gap-2  z-10 overflow-hidden 
+        lg:py-20 px-20">
+
+        <div class="flex flex-col items-center gap-2 pb-10 z-10" data-aos="fade-up">
+            <h1 class="text-4xl text-secondary-text3 font-bold">Build from one workspace</h1>
+            <span class="font-normal text-secondary-text">Clone the repo, run the apps, and extend the packages as your
+                product grows</span>
+            <p class="text-base font-normal text-secondary-text">Start from a clear `apps/` + `packages/` structure
+                instead of wiring cross-platform tooling yourself.</p>
+        </div>
+
+
+
+        <small class=" z-10 text-xs text-secondary-text2 font-normal">&copy; 2026 Monorepo Starter. All rights
+            reserved.</small>
+        <small class=" text-xs text-secondary-text2 font-normal">Distrubed by <span class="text-primary">
+                Themewagon</span></small>
+
+        <div class="absolute py-16 px-16 w-full h-full  -z-10 inset-0 overflow-hidden right-6 flex items-center gap-6">
+
+            <div class=" move-up move-1 ">
+                <i class="fa-solid fa-circle text-[8px] text-primary-2"></i>
+                <span class="text-xs text-primary font-normal ">Cube</span>
+            </div>
+            <div class=" move-up move-2 ">
+                <i class="fa-solid fa-circle text-[8px] text-primary-2"></i>
+                <span class="text-xs text-primary font-normal ">Cube</span>
+            </div>
+            <div class=" move-up move-3 ">
+                <i class="fa-solid fa-circle text-[8px] text-primary-2"></i>
+                <span class="text-xs text-primary font-normal ">Cube</span>
+            </div>
+            <div class=" move-up move-4 ">
+                <i class="fa-solid fa-circle text-[8px] text-primary-2"></i>
+                <span class="text-xs text-primary font-normal ">Cube</span>
+            </div>
+            <div class=" move-up move-5 ">
+                <i class="fa-solid fa-circle text-[8px] text-primary-2"></i>
+                <span class="text-xs text-primary font-normal ">Cube</span>
+            </div>
+            <div class=" move-up move-6 ">
+                <i class="fa-solid fa-circle text-[8px] text-primary-2"></i>
+                <span class="text-xs text-primary font-normal ">Cube</span>
+            </div>
+            <div class=" move-up move-7 ">
+                <i class="fa-solid fa-circle text-[8px] text-primary-2"></i>
+                <span class="text-xs text-primary font-normal ">Cube</span>
+            </div>
+            <div class=" move-up move-8 ">
+                <i class="fa-solid fa-circle text-[8px] text-primary-2"></i>
+                <span class="text-xs text-primary font-normal ">Cube</span>
+            </div>
+            <div class=" move-up move-9 ">
+                <i class="fa-solid fa-circle text-[8px] text-primary-2"></i>
+                <span class="text-xs text-primary font-normal ">Cube</span>
+            </div>
+            <div class=" move-up move-10">
+                <i class="fa-solid fa-circle text-[8px] text-primary-2"></i>
+                <span class="text-xs text-primary font-normal ">Cube</span>
+            </div>
+            <div class=" move-up move-11 ">
+                <i class="fa-solid fa-circle text-[8px] text-primary-2"></i>
+                <span class="text-xs text-primary font-normal ">Cube</span>
+            </div>
+            <div class=" move-up move-12 ">
+                <i class="fa-solid fa-circle text-[8px] text-primary-2"></i>
+                <span class="text-xs text-primary font-normal ">Cube</span>
+            </div>
+            <div class=" move-up move-13 ">
+                <i class="fa-solid fa-circle text-[8px] text-primary-2"></i>
+                <span class="text-xs text-primary font-normal ">Cube</span>
+            </div>
+            <div class=" move-up move-14">
+                <i class="fa-solid fa-circle text-[8px] text-primary-2"></i>
+                <span class="text-xs text-primary font-normal ">Cube</span>
+            </div>
+            <div class=" move-up move-15 ">
+                <i class="fa-solid fa-circle text-[8px] text-primary-2"></i>
+                <span class="text-xs text-primary font-normal ">Cube</span>
+            </div>
+
+        </div>
+
+
+
+
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
